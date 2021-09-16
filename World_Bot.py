@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import random
+import os
 
 from discord import message
 
@@ -8,7 +9,7 @@ from discord import message
 
 client = discord.Client()
 
-token = "ODg3NjM1MDE4ODkyMDY2ODQ2.YUHAhw.lUqXyEtyxefxAIhzIvIIGnBVaSk"
+
 
 @client.event
 async def on_ready():
@@ -42,7 +43,7 @@ async def on_message(message) :
 
 
 
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
